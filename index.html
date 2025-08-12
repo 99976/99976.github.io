@@ -2,13 +2,13 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>Discord webhook Sender</title>
+  <title>Discord webhook Sender😅</title>
 </head>
 <body>
-  <h2>Discord webhook Sender</h2>
-  <label>URL: <input type="text" id="webhookUrl" style="width: 400px;" placeholder="WebhookのURL入れてね" /></label><br><br>
-  <label>メッセージ: <input type="text" id="message" placeholder="送りたい言葉を入れてね" /></label><br><br>
-  <button onclick="sendMessage()">送信する！</button>
+  <h2>Discord webhook Sender😅</h2>
+  <label>URL: <input type="text" id="webhookUrl" style="width: 400px;" placeholder="WebhookのURL入れて" /></label><br><br>
+  <label>メッセージ: <input type="text" id="message" placeholder="送りたい言葉を入れて" /></label><br><br>
+  <button onclick="sendMessage()">送信</button>
   <p id="status"></p>
 
   <script>
@@ -18,7 +18,7 @@
       const status = document.getElementById('status');
       
       if (!url || !content) {
-        status.textContent = 'WebhookのURLとメッセージ、ちゃんと入れてね！';
+        status.textContent = 'URLとメッセージのどちらかがないです';
         status.style.color = 'red';
         return;
       }
@@ -32,14 +32,14 @@
           body: JSON.stringify({ content })
         });
         if (res.ok) {
-          status.textContent = '送信できたよ〜！✨';
+          status.textContent = '送信完了';
           status.style.color = 'green';
         } else {
-          status.textContent = `送信失敗しちゃった…ステータスコード: ${res.status}`;
+          status.textContent = `送信失敗… ${res.status}`;
           status.style.color = 'red';
         }
       } catch (error) {
-        status.textContent = 'WebhookのURLをもう一回チェックしてみて！';
+        status.textContent = 'WebhookのURLをもう一回確認してください';
         status.style.color = 'red';
       }
     }
